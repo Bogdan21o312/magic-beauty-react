@@ -31,7 +31,7 @@
         left: -100%;
         transition: all 0.3s ease 0s;
         width: 100%;
-        @include adaptiveValue("height", 70, 50, 768, 320, 2);
+        @include adaptiveValue("height", 120, 50, 768, 320, 2);
         background-color: #dadada;
         z-index: 2;
       }
