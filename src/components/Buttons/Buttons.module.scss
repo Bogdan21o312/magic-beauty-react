@@ -1,0 +1,54 @@
+@use "sass:math";
+
+@import "src/style/Style";
+
+
+.TellmiButton {
+  @media (max-width: $mobile) {
+    width: 100%;
+    @include adaptiveValue("height", 100, 50);
+  }
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: transparent;
+  border: rem(1) solid $mainColor;
+  outline: none;
+  transition: 1s ease-in-out;
+  @media (any-hover: hover) {
+    &:hover {
+      transition: 1s ease-in-out;
+      background: $violetColor;
+
+      span {
+        color: $whiteColor;
+      }
+
+      border: rem(2) solid $violetColor;
+
+      svg {
+        stroke-dashoffset: -480;
+      }
+    }
+  }
+
+  span {
+    transition: all 0.3s ease 0s;
+    font-size: rem(18);
+    font-weight: 100;
+    padding: rem(20) rem(30);
+  }
+
+  svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    fill: none;
+    stroke: #fff;
+    stroke-dasharray: 150 480;
+    stroke-dashoffset: 150;
+    transition: 1s ease-in-out;
+  }
+}
+
