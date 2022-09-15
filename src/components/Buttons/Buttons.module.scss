@@ -8,7 +8,8 @@
     width: 100%;
     @include adaptiveValue("height", 100, 50);
   }
-  display: inline-block;
+  display: flex;
+  padding: rem(20) rem(30);
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -38,6 +39,7 @@
     font-size: rem(18);
     font-weight: 100;
     padding: rem(20) rem(30);
+    color: $mainColor;
   }
 
   svg {
