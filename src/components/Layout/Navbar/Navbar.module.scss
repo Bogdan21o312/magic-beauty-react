@@ -124,7 +124,7 @@
   }
 }
 
-.menu__body.menu-open {
+.menu__body.menuOpen {
   left: 0;
 
   &::before {
@@ -188,14 +188,14 @@
 }
 
 
-.menu-open {
+.menuOpen {
   .lock & {
     overflow: hidden;
     touch-action: none;
     overscroll-behavior: none;
   }
 
-  .icon-menu.menu-open {
+  .icon-menu.menuOpen {
     span {
       width: 0;
     }

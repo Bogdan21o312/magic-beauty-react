@@ -1,32 +1,33 @@
 import React from 'react';
+import classes from "./Navbar.module.scss";
+import {Link} from "react-router-dom";
+import {Navbaritems} from "./Navbaritems";
 
-const Navbar = ({menuActive, setMenuActive}) => {
+const Navbar = ({menuActive}) => {
     React.useEffect(() => {
         if (menuActive) {
             document.body.style.overflow = 'hidden'
-        }
-        else {
+        } else {
             document.body.style.overflow = ''
         }
     }, [menuActive])
     return (
-        <nav className={menuActive ? 'menu__body menu-open' : 'menu__body'}>
-            <ul className="menu__list">
-                <li className="menu__item">
-                    <a className="menu__link">Home</a>
-                </li>
-                <li className="menu__item">
-                    <a className="menu__link">About</a>
-                </li>
-                <li className="menu__item">
-                    <a className="menu__link">Features</a>
-                </li>
-                <li className="menu__item">
-                    <a className="menu__link">How it works</a>
-                </li>
+        <nav className={` ${classes.menu__body} ${menuActive ? classes.menuOpen : ''}`}>
+            <ul className={classes.menu__list}>
+                {/*<li className={classes.menu__item}>*/}
+                {/*    <a className={classes.menu__link}>Home</a>*/}
+                {/*</li>*/}
+                {Navbaritems.map((navbarItem, index) => (
+                    <li className={classes.menu__item}>
+                        {/*<Link className={classes.menu__link} h={navbarItem.itemLink} key={index}>*/}
+                            {navbarItem.itemText}
+                        {/*</Link>*/}
+                    </li>
+                ))}
             </ul>
         </nav>
     );
 };
 
 export default Navbar;
+

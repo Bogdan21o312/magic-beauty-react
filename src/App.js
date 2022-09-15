@@ -1,11 +1,12 @@
 import React from "react";
-// import "./style/App.scss"
-import TellmiButton from "./components/Buttons/TellmiButton";
+import "./style/App.scss"
+import Header from "./components/Layout/Header/Header";
+
 
 function App() {
     return (
         <div className="wrapper">
-            <TellmiButton/>
+            <Header/>
             {/*<header className="header">*/}
             {/*    <div className="header__container">*/}
             {/*        <a href="" className="header__logo">*/}
