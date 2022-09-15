@@ -1,6 +1,6 @@
 @use "sass:math";
 
-@import "src/style/Style";
+@import "../../../assets/style/Style";
 
 .footer {
   @include adaptiveValue("margin-top", 50, 25);

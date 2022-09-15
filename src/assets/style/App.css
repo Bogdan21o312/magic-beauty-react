@@ -1,23 +1,23 @@
 /*
 Error: Invalid CSS after "...ing: 0 rem(math": expected ")", was ".div($container..."
-        on line 98 of ../Style.scss
-        from line 3 of Main.module.scss
+        on line 102 of Style.scss
+        from line 4 of App.scss
 
-93:       max-width: rem($maxWidthContainer);
-94:       box-sizing: content-box;
-95:       margin: 0 auto;
-96:     }
-97:     @if ($containerPadding>0) {
-98:       padding: 0 rem(math.div($containerPadding, 2));
-99:     }
-100:   }
-101: } @else {
-102:   // By break points
-103:   [class*="__container"] {
+97:       max-width: rem($maxWidthContainer);
+98:       box-sizing: content-box;
+99:       margin: 0 auto;
+100:     }
+101:     @if ($containerPadding>0) {
+102:       padding: 0 rem(math.div($containerPadding, 2));
+103:     }
+104:   }
+105: } @else {
+106:   // By break points
+107:   [class*="__container"] {
 
 Backtrace:
-../Style.scss:98
-Main.module.scss:3
+Style.scss:102
+App.scss:4
 /Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
 /Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/lexer.rb:240:in `expected!'
 /Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:862:in `assert_tok'
@@ -104,4 +104,4 @@ Main.module.scss:3
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"...ing: 0 rem(math\": expected \")\", was \".div($container...\"\A         on line 98 of ../Style.scss\A         from line 3 of Main.module.scss\A \A 93:       max-width: rem($maxWidthContainer);\A 94:       box-sizing: content-box;\A 95:       margin: 0 auto;\A 96:     }\A 97:     @if ($containerPadding>0) {\A 98:       padding: 0 rem(math.div($containerPadding, 2));\A 99:     }\A 100:   }\A 101: } @else {\A 102:   // By break points\A 103:   [class*=\"__container\"] {"; }
+  content: "Error: Invalid CSS after \"...ing: 0 rem(math\": expected \")\", was \".div($container...\"\A         on line 102 of Style.scss\A         from line 4 of App.scss\A \A 97:       max-width: rem($maxWidthContainer);\A 98:       box-sizing: content-box;\A 99:       margin: 0 auto;\A 100:     }\A 101:     @if ($containerPadding>0) {\A 102:       padding: 0 rem(math.div($containerPadding, 2));\A 103:     }\A 104:   }\A 105: } @else {\A 106:   // By break points\A 107:   [class*=\"__container\"] {"; }
