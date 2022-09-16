@@ -1,6 +1,5 @@
 import React from 'react';
 import classes from "./Navbar.module.scss";
-import {Link} from "react-router-dom";
 import {Navbaritems} from "./Navbaritems";
 
 const Navbar = ({menuActive}) => {
