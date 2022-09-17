@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Layout from "../../components/Layout/Layout";
 import Services from "../../components/Services";
 import Why from "../../components/Why";
@@ -7,6 +7,7 @@ import Certificate from "../../components/Certificate";
 import Brand from "../../components/Brand";
 
 const Index = () => {
+
     return (
         <Layout>
             <Services/>

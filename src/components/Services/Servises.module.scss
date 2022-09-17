@@ -12,20 +12,24 @@
     position: relative;
     cursor: pointer;
     color: $mainColor;
-    transition: all 0.5s ease 0s;
     @media (any-hover: hover) {
       &:hover {
         color: $violetColor;
         transform: scale(1.02);
       }
     }
+    //opacity: 0;
+    transition: 2s;
   }
 
   &__image {
+    transition: 2.5s;
+    //opacity: 0;
     display: flex;
     justify-content: center;
 
     &_txt {
+      transition: 2.5s;
       position: absolute;
       bottom: rem(10);
       text-align: center;
@@ -44,5 +48,20 @@
 
   &__sub-title {
     @include adaptiveValue("font-size", 25, 15);
+  }
+}
+
+.blockGallery__item {
+  opacity: 1;
+  transition: 2s;
+  .blockGallery__image {
+   opacity: 1;
+  }
+  .blockGallery__image_txt {
+    background-color: $whiteColor;
+    border-radius: rem(10);
+    @include adaptiveValue("padding-top", 30, 10);
+    @include adaptiveValue("padding-bottom", 30, 10);
+    width: 90%;
   }
 }

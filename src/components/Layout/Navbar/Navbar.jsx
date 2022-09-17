@@ -15,9 +15,9 @@ const Navbar = ({menuActive}) => {
             <ul className={classes.menu__list}>
                 {Navbaritems.map((navbarItem, index) => (
                     <li className={classes.menu__item}>
-                        {/*<Link className={classes.menu__link} h={navbarItem.itemLink} key={index}>*/}
+                        <a className={classes.menu__link}  key={index}>
                             {navbarItem.itemText}
-                        {/*</Link>*/}
+                        </a>
                     </li>
                 ))}
             </ul>

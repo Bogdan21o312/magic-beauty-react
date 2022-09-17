@@ -1,9 +1,10 @@
 import React from 'react';
 import classes from "./TXT.module.scss"
+import Aos from "aos";
 
 const Title = ({children}) => {
     return (
-        <h2 className={classes.Title}>
+        <h2 data-aos="fade-down" className={classes.Title}>
             {children}
         </h2>
     );

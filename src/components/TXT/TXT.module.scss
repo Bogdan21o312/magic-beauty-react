@@ -7,6 +7,12 @@
   text-align: center;
   @include adaptiveValue("margin-bottom", 50, 20);
   font-weight: bold;
+  opacity: 0;
+  transition: 2s;
+  &.active {
+    opacity: 1;
+    transition: 2s;
+  }
 }
 
 .SubTitle {
@@ -20,3 +26,4 @@
     @include adaptiveValue("margin-bottom", 10, 5);
   }
 }
+

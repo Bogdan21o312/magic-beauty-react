@@ -29,10 +29,13 @@ const Header = () => {
                     <Navbar menuActive={menuActive} setMenuActive={setMenuActive}/>
                 </div>
                 <div className={classes.header__action}>
-                    <TellmiButton/>
+                    <a href="tel:0677972940" className={classes.header__phone}>0 (67) 797 29 40</a>
+                    <div className={classes.header__button}>
+                        <TellmiButton/>
+                    </div>
                     <div
                         onClick={() => setMenuActive(!menuActive)}
-                        className={menuActive ? 'icon-menu menu-open' : 'icon-menu'}>
+                        className={`${classes.iconMenu} ${menuActive ? classes.menuOpen : ''}`}>
                         <span></span>
                     </div>
                 </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import classes from "./Why.module.scss"
 import {WhyColumnLeft, WhyColumnRight} from "./Whyitems";
+import "aos/dist/aos.css"
 
 const Index = () => {
     return (
@@ -8,13 +9,13 @@ const Index = () => {
             <div className={classes.why__columns}>
                 <div className={`${classes.why__column} ${classes.firstColumn}`}>
                     {WhyColumnLeft.map((item) => (
-                        <div className={classes.why__column_txt}>
+                        <div data-aos="fade-up-right" className={classes.why__column_txt}>
                             <div className={classes.why__column_title}>{item.itemTitle}</div>
                             <div className={classes.why__column_text}>{item.itemText}</div>
                         </div>
                     ))}
                 </div>
-                <div className={`${classes.why__column} ${classes.centerColumn}`}>
+                <div data-aos="fade-up" className={`${classes.why__column} ${classes.centerColumn}`}>
                     <div className={classes.why__column_title}>
                         Чому<br/>
                         ми
@@ -33,7 +34,7 @@ const Index = () => {
                 </div>
                 <div className={`${classes.why__column} ${classes.lastColumn}`}>
                     {WhyColumnRight.map((item) => (
-                        <div className={classes.why__column_txt}>
+                        <div data-aos="fade-down-left" className={classes.why__column_txt}>
                             <div className={classes.why__column_title}>{item.itemTitle}</div>
                             <div className={classes.why__column_text}>{item.itemText}</div>
                         </div>
