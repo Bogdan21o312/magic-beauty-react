@@ -11,7 +11,7 @@ const Navbar = ({menuActive}) => {
         }
     }, [menuActive])
     return (
-        <nav className={` ${classes.menu__body} ${menuActive ? classes.menuOpen : ''}`}>
+        <nav className={`${classes.menu__body} ${menuActive ? classes.menuOpen : ''}`}>
             <ul className={classes.menu__list}>
                 {Navbaritems.map((navbarItem, index) => (
                     <li className={classes.menu__item}>

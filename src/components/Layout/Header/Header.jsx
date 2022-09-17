@@ -7,9 +7,21 @@ const Header = () => {
 
     const [menuActive, setMenuActive] = React.useState(false)
 
+    const [headerScroll, setHeaderScroll] = React.useState(false)
+
+    const addHeaderScroll = () => {
+        if (window.scrollY >= 25) {
+            setHeaderScroll(true)
+        }else {
+            setHeaderScroll(false)
+        }
+    };
+
+    window.addEventListener('scroll', addHeaderScroll);
+
     return (
-        <header className={classes.header}>
-            <div className="header__container">
+        <header className={`${classes.header} ${headerScroll ? classes.headerScroll : ''}`}>
+            <div className={classes.header__container}>
                 <a className={classes.header__logo}>
                     Magic beauty
                 </a>
