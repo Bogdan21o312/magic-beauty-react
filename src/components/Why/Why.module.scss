@@ -1,0 +1,90 @@
+@use "sass:math";
+
+@import "src/assets/style/Style";
+
+.why {
+  @include adaptiveValue("margin-top", 50, 25);
+  @include adaptiveValue("margin-bottom", 50, 25);
+  &__columns {
+    display: flex;
+    justify-content: center;
+    @include adaptiveValue("column-gap", 30, 10);
+    row-gap: rem(10);
+    @media (max-width: em(912)){
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__column {
+    @include adaptiveValue("font-size", 24, 18);
+    &_txt {
+      p {
+        @include adaptiveValue("font-size", 30, 24);
+        font-weight: bold;
+        &:not(:last-child) {
+          @include adaptiveValue("margin-bottom", 30, 15);
+        }
+        span {
+          color: $violetColor;
+        }
+      }
+      @media (max-width: em(912)) {
+        text-align: center;
+      }
+      &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 70, 30);
+      }
+    }
+    
+    &_title {
+      @include adaptiveValue("font-size", 30, 24);
+      font-weight: bold;
+      &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 20, 10);
+      }
+    }
+    
+    &_subTitle {
+      &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 30, 20);
+      }
+    }
+
+    &_text {
+      &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 10, 5);
+      }
+    }
+    
+    &_image {
+      &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 200, 30);
+      }
+      img {
+        width: 100%;
+      }
+    }
+
+  }
+}
+
+.firstColumn {
+  text-align: right;
+  @media (max-width: em(912)) {
+    display: none;
+  }
+}
+
+.lastColumn {
+  @media (max-width: em(912)) {
+    display: none;
+  }
+}
+
+.centerColumn {
+  border: rem(1) solid $mainColor;
+  @include adaptiveValue("padding-top", 50, 30);
+  @include adaptiveValue("padding-bottom", 50, 30);
+  @include adaptiveValue("padding-right", 50, 30);
+  @include adaptiveValue("padding-left", 50, 30);
+}
