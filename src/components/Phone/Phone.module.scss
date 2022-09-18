@@ -1,0 +1,8 @@
+@use "sass:math";
+
+@import "src/assets/style/Style";
+
+.phone {
+  color: $mainColor;
+  @include adaptiveValue("font-size", 20, 15);
+}

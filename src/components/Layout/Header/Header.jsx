@@ -3,6 +3,7 @@ import classes from "./Header.module.scss";
 import Navbar from "../Navbar/Navbar";
 import TellmiButton from "../../Buttons/TellmiButton";
 import {Link} from "react-router-dom";
+import Phone from "../../Phone";
 
 const Header = () => {
 
@@ -31,7 +32,7 @@ const Header = () => {
                         <Navbar menuActive={menuActive} setMenuActive={setMenuActive}/>
                     </div>
                     <div className={classes.header__action}>
-                        <a href="tel:0677972940" className={classes.header__phone}>0 (67) 797 29 40</a>
+                        <Phone/>
                         <div className={classes.header__button}>
                             <TellmiButton/>
                         </div>
