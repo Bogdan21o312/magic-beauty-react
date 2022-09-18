@@ -1,6 +1,5 @@
 import React from 'react';
 import classes from "./TXT.module.scss"
-import Aos from "aos";
 
 const Title = ({children}) => {
     return (

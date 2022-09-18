@@ -8,10 +8,13 @@ import Eyebrows from "../../../pages/Eyebrows";
 import Sugaring from "../../../pages/Sugaring";
 import Pedicure from "../../../pages/Pedicure";
 import Error from "../../../pages/Error";
+import About from "../../../pages/About";
 
 const Index = () => {
     return (
         <Routes>
+            <Route path={"/"} element={<Home/>}/>
+            <Route path={"/about"} element={<About/>}/>
             <Route path={"/"} element={<Home/>}/>
             <Route path={"/permanent-makeup"} element={<PermanentMakeup/>}/>
             <Route path={"/manicure"} element={<Manicure/>}/>

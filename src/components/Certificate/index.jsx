@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import classes from "./Certificate.module.scss"
 import Aos from "aos";
 import "aos/dist/aos.css"
+import Phone from "../Phone";
 
 const Index = () => {
     useEffect(() => {
@@ -16,7 +17,7 @@ const Index = () => {
                         Сертифікати для жінок на конкретну послугу або на певну суму.
                     </li>
                     <li className={classes.certificate__item}>
-                        Задати будь-які питання Ви можете за телефоном <a href="tel:0677972940">0 (67) 797 29 40</a>
+                        Задати будь-які питання Ви можете за телефоном <Phone/>
                     </li>
                 </ul>
             </div>
