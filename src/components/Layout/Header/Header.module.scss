@@ -31,8 +31,10 @@
     position: relative;
     z-index: 5;
     transition: all 0.3s ease 0s;
+    color: $mainColor;
     @media (any-hover: hover) {
       &:hover {
+        color: $violetColor;
       }
     }
     @include adaptiveValue("font-size", 30, 20);

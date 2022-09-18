@@ -2,6 +2,7 @@ import React from 'react';
 import classes from "./Header.module.scss";
 import Navbar from "../Navbar/Navbar";
 import TellmiButton from "../../Buttons/TellmiButton";
+import {Link} from "react-router-dom";
 
 const Header = () => {
 
@@ -23,9 +24,9 @@ const Header = () => {
         <header className={`${classes.header} ${headerScroll ? classes.headerScroll : ''}`}>
             <div className="Header__container">
                 <div className={classes.header__container}>
-                    <a className={classes.header__logo}>
+                    <Link to="/" className={classes.header__logo}>
                         Magic beauty
-                    </a>
+                    </Link>
                     <div className={classes.header__menu}>
                         <Navbar menuActive={menuActive} setMenuActive={setMenuActive}/>
                     </div>

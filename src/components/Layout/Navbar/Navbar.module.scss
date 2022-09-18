@@ -65,12 +65,14 @@
   }
 
   &__link {
+    color: $mainColor;
     @media (max-width: $mobile) {
       font-size: rem(40);
     }
     transition: color 0.3s ease 0s;
     @media (any-hover: hover) {
       &:hover {
+        color: $violetColor;
       }
     }
   }

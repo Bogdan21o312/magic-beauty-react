@@ -1,6 +1,7 @@
 import React from 'react';
 import classes from "./Navbar.module.scss";
 import {Navbaritems} from "./Navbaritems";
+import {Link} from "react-router-dom";
 
 const Navbar = ({menuActive}) => {
     React.useEffect(() => {
@@ -15,9 +16,9 @@ const Navbar = ({menuActive}) => {
             <ul className={classes.menu__list}>
                 {Navbaritems.map((navbarItem, index) => (
                     <li className={classes.menu__item}>
-                        <a className={classes.menu__link}  key={index}>
+                        <Link to={navbarItem.itemLink} className={classes.menu__link}  key={index}>
                             {navbarItem.itemText}
-                        </a>
+                        </Link>
                     </li>
                 ))}
             </ul>
