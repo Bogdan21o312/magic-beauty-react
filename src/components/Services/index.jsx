@@ -5,6 +5,7 @@ import ServicesGrid from "../Grid/ServicesGrid";
 import Title from "../TXT/Title";
 import Aos from "aos";
 import "aos/dist/aos.css"
+import {Link} from "react-router-dom";
 
 const Index = () => {
 
@@ -19,7 +20,7 @@ const Index = () => {
             <div className={classes.blockgGllery}>
                 <ServicesGrid>
                     {Serviseitems.map((item, index) => (
-                        <a data-aos="fade-up" href={item.itemLink}
+                        <Link data-aos="fade-up" to={item.itemLink}
                            className={classes.blockGallery__item}
                            key={index}>
                             <div className={classes.blockGallery__image}>
@@ -29,7 +30,7 @@ const Index = () => {
                                     <div className={classes.blockGallery__subTitle}>Детальніше</div>
                                 </div>
                             </div>
-                        </a>
+                        </Link>
                     ))}
                 </ServicesGrid>
             </div>

@@ -12,7 +12,7 @@ const Header = () => {
     const addHeaderScroll = () => {
         if (window.scrollY >= 25) {
             setHeaderScroll(true)
-        }else {
+        } else {
             setHeaderScroll(false)
         }
     };
@@ -21,22 +21,24 @@ const Header = () => {
 
     return (
         <header className={`${classes.header} ${headerScroll ? classes.headerScroll : ''}`}>
-            <div className={classes.header__container}>
-                <a className={classes.header__logo}>
-                    Magic beauty
-                </a>
-                <div className={classes.header__menu}>
-                    <Navbar menuActive={menuActive} setMenuActive={setMenuActive}/>
-                </div>
-                <div className={classes.header__action}>
-                    <a href="tel:0677972940" className={classes.header__phone}>0 (67) 797 29 40</a>
-                    <div className={classes.header__button}>
-                        <TellmiButton/>
+            <div className="Header__container">
+                <div className={classes.header__container}>
+                    <a className={classes.header__logo}>
+                        Magic beauty
+                    </a>
+                    <div className={classes.header__menu}>
+                        <Navbar menuActive={menuActive} setMenuActive={setMenuActive}/>
                     </div>
-                    <div
-                        onClick={() => setMenuActive(!menuActive)}
-                        className={`${classes.iconMenu} ${menuActive ? classes.menuOpen : ''}`}>
-                        <span></span>
+                    <div className={classes.header__action}>
+                        <a href="tel:0677972940" className={classes.header__phone}>0 (67) 797 29 40</a>
+                        <div className={classes.header__button}>
+                            <TellmiButton/>
+                        </div>
+                        <div
+                            onClick={() => setMenuActive(!menuActive)}
+                            className={`${classes.iconMenu} ${menuActive ? classes.menuOpen : ''}`}>
+                            <span></span>
+                        </div>
                     </div>
                 </div>
             </div>

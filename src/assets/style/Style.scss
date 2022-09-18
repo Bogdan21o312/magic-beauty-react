@@ -48,6 +48,8 @@ $responsiveType: 1;
 
 body {
   background-color: $violetColor;
+  @include adaptiveValue("padding", 30, 5);
+
 }
 
 main {
@@ -57,12 +59,14 @@ main {
 // Shell Wrapper ============================================================================================================================================================================================================================================================================================================================================================================================================================================
 .wrapper {
   background-color: $whiteColor;
-  @include adaptiveValue("margin", 30, 5);
+  margin: rem(5) auto;
   min-height: 100vh;
   border-radius: rem(10);
   display: flex;
+
   flex-direction: column;
   overflow: hidden;
+  max-width: rem(1440);
   // Press footer
   > main {
     flex: 1 1 auto;
