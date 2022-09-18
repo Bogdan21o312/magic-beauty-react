@@ -5,6 +5,7 @@ import Why from "../../components/Why";
 import Works from "../../components/Works";
 import Certificate from "../../components/Certificate";
 import Brand from "../../components/Brand";
+import Way from "../../components/Way";
 
 const Index = () => {
 
@@ -15,6 +16,7 @@ const Index = () => {
             <Works/>
             <Certificate/>
             <Brand/>
+            <Way/>
         </Layout>
     );
 };

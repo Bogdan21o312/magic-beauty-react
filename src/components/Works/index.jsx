@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import classes from "./Works.module.scss"
 import Aos from "aos";
 import "aos/dist/aos.css"
+import Title from "../TXT/Title";
 
 const Index = () => {
     useEffect(function () {
@@ -10,7 +11,7 @@ const Index = () => {
     return (
         <section className={classes.works}>
                 <div className={classes.works__content}>
-                    <h2 data-aos="fade-down" className={classes.works__title}>Наші роботи</h2>
+                    <Title data-aos="fade-down">Наші роботи</Title>
                     <div className={classes.works__items}>
                         <div className={classes.works__item}>
                             <div className={classes.works__image}>
