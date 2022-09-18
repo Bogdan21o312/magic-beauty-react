@@ -6,6 +6,7 @@ import Title from "../TXT/Title";
 import Aos from "aos";
 import "aos/dist/aos.css"
 import {Link} from "react-router-dom";
+import GoogleMaps from "../GoogleMaps";
 
 const Index = () => {
 
