@@ -1,21 +1,46 @@
 import React from 'react';
 import classes from "./Why.module.scss"
 import {WhyColumnLeft, WhyColumnRight} from "./Whyitems";
-import "aos/dist/aos.css"
+import {motion} from "framer-motion";
 
 const Index = () => {
     return (
         <section className={classes.why}>
             <div className={classes.why__columns}>
-                <div className={`${classes.why__column} ${classes.firstColumn}`}>
+                <div
+                    className={`${classes.why__column} ${classes.firstColumn}`}>
                     {WhyColumnLeft.map((item) => (
-                        <div data-aos="fade-up-right" className={classes.why__column_txt}>
+                        <motion.div
+                            initial={{
+                                x: -30,
+                                y: 30,
+                                opacity: 0,
+                            }}
+                            whileInView={{
+                                x: 0,
+                                y: 0,
+                                opacity: 1,
+                                transition: {delay: 0.03},
+                                viewport: {amount: 0.02}
+                            }}
+                            className={classes.why__column_txt}>
                             <div className={classes.why__column_title}>{item.itemTitle}</div>
                             <div className={classes.why__column_text}>{item.itemText}</div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
-                <div data-aos="fade-up" className={`${classes.why__column} ${classes.centerColumn}`}>
+                <motion.div
+                    initial={{
+                        y: 40,
+                        opacity: 0,
+                    }}
+                    whileInView={{
+                        y: 0,
+                        opacity: 1,
+                        transition: {delay: 0.03},
+                        viewport: {amount: 0.02}
+                    }}
+                    className={`${classes.why__column} ${classes.centerColumn}`}>
                     <div className={classes.why__column_title}>
                         Чому<br/>
                         ми
@@ -31,13 +56,26 @@ const Index = () => {
                             яскравими фарбами!
                         </div>
                     </div>
-                </div>
+                </motion.div>
                 <div className={`${classes.why__column} ${classes.lastColumn}`}>
                     {WhyColumnRight.map((item) => (
-                        <div data-aos="fade-down-left" className={classes.why__column_txt}>
+                        <motion.div
+                            initial={{
+                                x: 30,
+                                y: 30,
+                                opacity: 0,
+                            }}
+                            whileInView={{
+                                x: 0,
+                                y: 0,
+                                opacity: 1,
+                                transition: {delay: 0.03},
+                                viewport: {amount: 0.02}
+                            }}
+                            className={classes.why__column_txt}>
                             <div className={classes.why__column_title}>{item.itemTitle}</div>
                             <div className={classes.why__column_text}>{item.itemText}</div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>

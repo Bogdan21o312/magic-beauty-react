@@ -9,13 +9,14 @@ import Sugaring from "../../../pages/Sugaring";
 import Pedicure from "../../../pages/Pedicure";
 import Error from "../../../pages/Error";
 import About from "../../../pages/About";
+import Contacts from "../../../pages/Contacts";
 
 const Index = () => {
     return (
         <Routes>
             <Route path={"/"} element={<Home/>}/>
             <Route path={"/about"} element={<About/>}/>
-            <Route path={"/"} element={<Home/>}/>
+            <Route path={"/contacts"} element={<Contacts/>}/>
             <Route path={"/permanent-makeup"} element={<PermanentMakeup/>}/>
             <Route path={"/manicure"} element={<Manicure/>}/>
             <Route path={"/eyelashes"} element={<Eyelashes/>}/>

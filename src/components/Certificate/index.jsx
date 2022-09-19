@@ -1,15 +1,11 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import classes from "./Certificate.module.scss"
-import Aos from "aos";
-import "aos/dist/aos.css"
 import Phone from "../Phone";
 
 const Index = () => {
-    useEffect(() => {
-        Aos.init({duration: 2000});
-    }, [])
+
     return (
-        <section data-aos="fade-up" className={classes.certificate}>
+        <section className={classes.certificate}>
             <div className={classes.certificate__content}>
                 <h2 className={classes.certificate__title}>Подарунковий сертифікат в салон краси</h2>
                 <ul className={classes.certificate__list}>

@@ -1,23 +1,31 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import classes from "./Works.module.scss"
-import Aos from "aos";
 import "aos/dist/aos.css"
 import Title from "../TXT/Title";
+import {motion} from "framer-motion";
 
 const Index = () => {
-    useEffect(function () {
-        Aos.init({ duration: 1000 });
-    }, []);
     return (
         <section className={classes.works}>
                 <div className={classes.works__content}>
-                    <Title data-aos="fade-down">Наші роботи</Title>
+                    <Title>Наші роботи</Title>
                     <div className={classes.works__items}>
-                        <div className={classes.works__item}>
+                        <motion.div
+                            initial={{
+                                y: 30,
+                                opacity: 0,
+                            }}
+                            whileInView={{
+                                y: 0,
+                                opacity: 1,
+                                transition: {delay: 0.03},
+                                viewport: {amount: 0.02}
+                            }}
+                            className={classes.works__item}>
                             <div className={classes.works__image}>
-                                <img data-aos="fade-up" src="" alt="Скиньте фото найкращих робіт десь 16-20 фото хватить"/>
+                                <img src="" alt="Скиньте фото найкращих робіт десь 16-20 фото хватить"/>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
         </section>
